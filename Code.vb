@@ -18,3 +18,10 @@ Dim No_tickers As Long
 Dim Max_ticker As Long
 Dim Min_ticker As Long
 Dim Max_Volume_ticker As Long
+
+'Initializing variables
+
+Total = 0
+Summary_table_row = 2
+Lastrow = Cells(Rows.Count, "A").End(xlUp).Row
+
