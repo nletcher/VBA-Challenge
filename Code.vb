@@ -102,3 +102,14 @@ Cells(4, 19).NumberFormat = "0.00%"
 
 Cells(5, 19).Value = Max_Volume
 
+'Find the corresponding ticker
+Max_ticker = Application.WorksheetFunction.Match(Application.WorksheetFunction.Max(Range("N2:N" & No_tickers)), Range("N2:N" & No_tickers), 0)
+Min_ticker = Application.WorksheetFunction.Match(Application.WorksheetFunction.Min(Range("N2:N" & No_tickers)), Range("N2:N" & No_tickers), 0)
+
+Max_Volume_ticker = Application.WorksheetFunction.Match(Application.WorksheetFunction.Max(Range("O2:O" & No_tickers)), Range("O2:O" & No_tickers), 0)
+
+Cells(3, 18).Value = Cells(Max_ticker + 1, 12)
+Cells(4, 18).Value = Cells(Min_ticker + 1, 12)
+Cells(5, 18).Value = Cells(Max_Volume_ticker + 1, 12)
+
+End Sub
