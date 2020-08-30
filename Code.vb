@@ -79,3 +79,5 @@ For i = 2 To Lastrow
     
 Next i
 
+'Formating Percentage Change Column to %
+Columns(14).NumberFormat = "0.00%"
