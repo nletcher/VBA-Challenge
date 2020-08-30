@@ -81,3 +81,24 @@ Next i
 
 'Formating Percentage Change Column to %
 Columns(14).NumberFormat = "0.00%"
+
+'Finding Max and Min Values in summary table
+No_tickers = Cells(Rows.Count, "N").End(xlUp).Row
+
+Max = Application.WorksheetFunction.Max(Range("N2:N" & No_tickers))
+Min = Application.WorksheetFunction.Min(Range("N2:N" & No_tickers))
+Max_Volume = Application.WorksheetFunction.Max(Range("O2:O" & No_tickers))
+
+
+Cells(3, 19).Value = Max
+'Formating to Percentage
+Cells(3, 19).NumberFormat = "0.00%"
+
+
+Cells(4, 19).Value = Min
+'Formating to Percentage
+Cells(4, 19).NumberFormat = "0.00%"
+
+
+Cells(5, 19).Value = Max_Volume
+
