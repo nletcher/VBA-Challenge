@@ -25,3 +25,16 @@ Total = 0
 Summary_table_row = 2
 Lastrow = Cells(Rows.Count, "A").End(xlUp).Row
 
+'Headers for summary table
+
+Range("L1").Value = "Ticker"
+Range("M1").Value = "Yearly Change"
+Range("N1").Value = "Percent Change"
+Range("O1").Value = "Total Stock Volume"
+
+'Headers for #challenge table
+Range("Q3").Value = "Greatest % Increase"
+Range("Q4").Value = "Greatest % Decrease"
+Range("Q5").Value = "Greatest Total Volume"
+
+
