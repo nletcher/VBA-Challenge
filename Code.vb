@@ -1,3 +1,14 @@
+Sub RunSheets()
+    Dim xSh As Worksheet
+    Application.ScreenUpdating = False
+    For Each xSh In Worksheets
+        xSh.Select
+        Call Program
+    Next
+    Application.ScreenUpdating = True
+     
+End Sub
+
 Sub Program()
 'Declare variables
 Dim Ticker As String
